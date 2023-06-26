@@ -1,12 +1,483 @@
 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../isabella_micumple/index.css">
+    <link rel="stylesheet" href="../isabella_micumple/css/index.css">
     <title>Isabella - Mi Primer Año</title>
-    <link rel="icon" href="./logo.jpg">
+    <link rel="icon" href="../dm paginas/logo.jpg">
+
+
+
+<style>
+    *{
+    padding: 0;
+    margin: 0;
+    
+    flex-wrap: wrap;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+ 
+section{
+    width: 100%;
+    height: 100vh;
+
+}
+ 
+body::-webkit-scrollbar{
+
+  width: 0;
+  height: 0;
+ 
+
+}
+
+.inicio{
+    background:gray;
+    
+
+
+}
+.fechaa{
+    width: 100%;
+    height: 400px;
+    background-color: #e9bdbe;
+}
+
+
+
+.fecha h1{
+    position: absolute;
+    margin-top:135px;
+color: white;
+margin-left: 315px;
+font-size: 100px;
+font-weight:100 ;
+}
+
+.fecha img{
+
+   margin-top:220px;
+   margin-left: 420px;
+}
+
+.invitacion img{
+width: 400px;
+
+
+}
+
+.invitacion div{
+    text-align: center;
+}
+
+.invitacion h2{
+    line-height: 100px;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+    text-indent: 10px;
+    font-size: 70px;
+    font-weight:100 ;
+}
+
+#fondo {
+    display: none;
+    background-color: rgba(0,0,0,0.3);
+    top: 0;
+    left: 0;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    height: 100vh;
+    width: 100vw;
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .6s .9s;
+    --transform: translateY(-100vh);
+    --transition: transform .8s;
+}
+
+.modal--show{
+    opacity: 1;
+    pointer-events: unset;
+    transition: opacity .6s;
+    --transform: translateY(0);
+    --transition: transform .8s .8s;
+}
+
+.modal__container{
+    margin: auto;
+    width: 90%;
+    max-width: 580px;
+    max-height: 90%;
+    height: 580px;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 10px;
+    display: grid;
+    gap: 1em;
+    place-items: center;
+    grid-auto-columns: 100%;
+    transform: var(--transform);
+    transition:var(--transition);
+}
+
+.modal__close{
+    position: absolute;
+    margin-top: -538px;
+    margin-left:92%;
+    text-decoration: none;
+    color: #fff;
+    background-color: #F26250;
+    padding: 10px;
+    border: 1px solid ;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 300;
+    transition: background-color .3s;
+}
+
+
+.modal__close:hover{
+    color: #F26250;
+    background-color: #fff;
+}
+
+
+
+#map{
+
+    
+
+    height: 500px;
+    width: 500px;
+
+    
+}
+
+
+.invitacion .nube
+{
+    width: 15%;
+    
+    
+}
+
+.invitacion p{
+    font-family: arial;
+    font-size: 50px;
+    line-height: 70px;
+    letter-spacing: 2px;
+    word-spacing: 5px;
+}
+
+.invitacion .hero__cta{
+
+font-size: 20px;
+text-decoration: none;
+list-style: none;
+border: 1px solid black;
+border-radius: 30px;
+padding: 15px;
+color: white;
+background-color: black;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 700;
+transition: 0.3s ease;
+}
+
+.invitacion .hero__cta:hover{
+    background-color:rgb(42, 41, 41);
+}
+
+.confirmacion .mariposa{
+    width: 150px;
+}
+.confirmacion{
+    margin-top: 60%;text-align: center;
+}
+
+.confirmacion .titulo{
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    font-size: 30px;
+  
+}
+
+.caja .foto
+{
+    display: inline-flex;
+    width: 350px;
+    height: 350px;
+    background-color: gray;
+    border-radius: 500px;
+   
+}
+.foto{
+    margin: 20px;
+}
+
+.asistenciaa .tittle{
+    font-size: 35px;
+    font-family: arial;
+    font-weight: 600;
+}
+
+.asistenciaa .info{
+    font-size: 25px;
+    font-family: arial;
+    font-weight: 100;
+    color: rgb(28, 28, 28);
+    letter-spacing: 2px;
+    word-spacing:2px ;
+}
+.asistenciaa a{
+    font-size: 20px;
+    background-color:black;
+    color: white;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 15px;
+    font-weight: 700;
+    font-family: arial;
+    transition: 0.3s ease;
+}
+
+.asistenciaa a:hover{
+    background-color:rgb(42, 41, 41);
+}
+
+#imagenfinal{
+    background-color: #e9bdbe;
+    margin-top: 430px;
+      height: 600px;
+}
+
+#imagenfinal{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    line-height: 50px;
+
+   
+}
+
+#imagenfinal p{
+font-weight: 100;
+font-size: 40px;
+}
+
+#imagenfinal h1{
+    font-weight: 900;
+    font-size: 40px;
+    font-style: oblique;
+}
+
+#imagenfinal img{
+    width: 160px;
+}
+
+footer .ti{
+    background-color: rgb(235, 229, 229);
+    text-align: center;
+   padding: 5px;
+    font-family: arial;
+    font-weight: 100;
+  font-size: 15px;
+  color: black;
+}
+
+.ti a{
+    text-decoration: none;
+    color: rgb(165, 165, 165);
+    transition: 0.3s ease;
+}
+
+.ti a:hover{
+    color: rgb(121, 121, 121);
+}
+
+footer .derechos{
+    padding: 20px;
+    background-color: rgb(202, 199, 199);
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(85, 84, 84);
+}
+
+.derechos a{
+    text-decoration: none;
+    color: rgb(85, 84, 84);
+}
+
+@media screen and (max-width: 400px) {
+
+}
+
+@media screen and (max-width: 400px) {
+.inicio{
+    background: gray;
+    width: 100%;
+}
+
+.fechaa{
+    width: 100%;
+    height: 200px;
+    background-color: #e9bdbe;
+}
+.fecha h1{
+ position: absolute;
+ margin-top:80px;
+ margin-left: 75px;
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    font-weight:100 ;
+    }
+ 
+    .fecha img{
+        width: 280px;
+        margin-top:106px;
+        margin-left: 60px;
+     }
+
+
+
+     .invitacion{
+        width: 100%;
+    
+     }
+
+     .invitacion img{
+        width: 155px;
+     }
+
+     .invitacion h2{
+        font-size: 25px;
+        line-height: 50px;
+        letter-spacing: 2px;
+        word-spacing: 10px;
+        text-indent: 10px;
+        font-weight:100 ;
+     }
+
+     .invitacion .nube{
+        width: 135px;
+     }
+
+     .invitacion p {
+        font-size:23px ;
+        line-height: 50px;
+        word-spacing: 0px;
+        letter-spacing: 0.5px;
+     }
+
+     .invitacion .hero__cta{
+        font-size: 17px;
+     }
+
+     .modal__container{
+        margin: auto;
+        width: 50%;
+        max-width: 350px;
+        max-height: 50%;
+        height: 580px;}
+
+        #map{
+            width: 250px;
+            height: 370px;
+        }
+
+        .modal__close{
+            padding: 5px;
+            margin-top: -405px;
+            margin-left: 90%;
+        }
+
+
+        .confirmacion{
+            width: 100%;
+        }
+
+        .confirmacion .titulo{
+            font-size: 25px;
+        }
+
+        .confirmacion .mariposa
+        {
+            width: 120px;
+        }
+
+        .caja .foto{
+            width: 230px;
+            height: 230px;
+        }
+
+        .confirmacion .separador{
+            width: 250px;
+        }
+
+        .asistenciaa .tittle{
+            font-size: 30px;
+        }
+
+        .asistenciaa .info{
+            font-size: 20px;
+            letter-spacing: 1px;
+            word-spacing: 1px;
+
+        }
+
+        .asistenciaa a{
+            font-size: 16px;
+        }
+       #imagenfinal{
+        margin-top: 750px;
+       }
+
+       #imagenfinal p{
+        font-size: 25px;
+        letter-spacing: 1px;
+        word-spacing: 1px;
+
+       }
+
+       #imagenfinal h1{
+        font-size: 23px;
+        font-style: oblique;
+        letter-spacing: 1px;
+        word-spacing: 1px;
+       }
+
+       #imagenfinal img{
+        width: 130px;
+       }
+}
+
+</style>
+
 </head>
 <body>
     <section class="inicio"> </section>
@@ -15,18 +486,18 @@
  
         <h1>29 . JULIO . 2023</h1>
       
-      <img src="../isabella_micumple/Untitled-3.png" alt="">
+      <img src="../isabella_micumple/img/Untitled-3.png" alt="">
 
     </div></section>
     <section class="invitacion">
         <br>
         <br>
         <div>
-        <img src="../isabella_micumple/descargar-(2).png"  alt="">
+        <img src="../isabella_micumple/img/descargar-(2).png"  alt="">
         <br>
         <br>
         <h2>TE INVITO A FESTEJAR <br> MI PRIMER AÑITO <br> EN "LOMAS DEL GOLF" <br> A LAS 12:30HS </h2>
-        <img class="nube" src="../isabella_micumple/descargar-(1).png" alt="">
+        <img class="nube" src="../isabella_micumple/img/descargar-(1).png" alt="">
         <p>Lomas del Gol - Club de Campo <br> Quequen</p>
         <br>
         <br>
@@ -51,13 +522,13 @@
     <br>
     <section class="confirmacion">
         <p class="titulo"><b>¡MIS FOTITOS!</b></p>
-      <img class="mariposa" src="../isabella_micumple/40-Small-Simple-Meaningful-Tattoo-Ideas.png" alt="">
+      <img class="mariposa" src="../isabella_micumple/img/40-Small-Simple-Meaningful-Tattoo-Ideas.png" alt="">
 <div class="caja">
         <div class="foto"></div>
         <div class="foto"></div>
         <div class="foto"></div></div>
         <br>
-        <img class="separador" src="../isabella_micumple/Untitled-1.png" alt="">
+        <img class="separador" src="../isabella_micumple/img/Untitled-1.png" alt="">
         <br>
         <br>
         <div class="asistenciaa">
@@ -77,7 +548,7 @@
         <h1>TAN IMPORTANTE PARA MI¡</h1></div>
         <br>
         <br>
-        <img src="../isabella_micumple/descargar-(3).png" alt="">
+        <img src="../isabella_micumple/img/descargar-(3).png" alt="">
     </section>
     <footer>
         <div class="ti">
@@ -88,9 +559,45 @@
       </div>
     </footer>
 
-    <script src="../isabella_micumple/main.js"></script>
-   <script src="../isabella_micumple/mapa.js"></script>
+
     <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDLoIpKrz4EBKUQyxQQsAyxJLEAzprlizs&callback=initMap"></script>
+   <script>
    
+let Coords = {lat: -38.558149 , lng: -58.6694818};
+        let map;
+        let marker;
+        let mapDiv = document.getElementById('map')
+        
+        function initMap(){
+           
+             map = new google.maps.Map(mapDiv,{
+                zoom:15,
+                center: Coords,
+            });
+        
+        marker = new google.maps.Marker ({
+                position: Coords,
+                mar: map,
+            });
+        } 
+   </script>
+
+
+<script>
+    
+const openModal = document.querySelector('.hero__cta');
+const modal = document.querySelector('.modal');
+const closeModal = document.querySelector('.modal__close');
+
+openModal.addEventListener('click', (e)=>{
+    e.preventDefault();
+    modal.classList.add('modal--show');
+});
+
+closeModal.addEventListener('click', (e)=>{
+    e.preventDefault();
+    modal.classList.remove('modal--show');
+});
+</script>
 </body>
 </html>
